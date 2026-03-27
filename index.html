@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,52 +16,52 @@
         <div class="container nav-flex">
             <div class="logo">INKA <span>CONSULTING</span></div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Our Approach</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="tel:7056908066" class="btn-cta">705.690.8066</a></li>
+                <li><a href="tel:7056908066" class="nav-phone"><i class="fa fa-phone"></i> 705.690.8066</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container hero-flex">
-            <div class="hero-text">
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text-box">
                 <span class="badge">Boutique HR Consultancy</span>
                 <h1>Unlocking the potential of your <span>greatest asset.</span></h1>
                 <p>Led by Dhwani Bhatia, we partner with organizations to build people-first workplaces through expert, forward-thinking HR solutions.</p>
                 <div class="hero-btns">
                     <a href="#services" class="btn-primary">Our Practice Areas</a>
-                    <a href="#contact" class="btn-secondary">Get in Touch</a>
+                    <a href="#about" class="btn-outline">Learn More</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Inka Consulting Leadership">
-            </div>
         </div>
-    </header>
+    </section>
 
     <section id="about" class="intro-section">
         <div class="container intro-grid">
             <div class="intro-box">
                 <span class="label">Our Mission</span>
                 <h2>Building People-First Workplaces</h2>
-                <p>We deliver expert HR solutions — from recruitment and compliance to leadership development. Grounded in trust, respect, and empowerment, we help clients unlock their full potential.</p>
+                <p>We partner with organizations to build workplaces grounded in trust, respect, empowerment, and continuous learning. We help clients unlock the full potential of their people.</p>
             </div>
             <div class="intro-box">
                 <span class="label">Our Vision</span>
-                <h2>The Trusted Partner</h2>
+                <h2>The Trusted HR Partner</h2>
                 <p>To be the most trusted HR consulting partner for organizations that believe their people are their competitive advantage — shaping inclusive, agile, and high-performing teams.</p>
             </div>
         </div>
     </section>
 
-    <section class="founder-section">
-        <div class="container founder-flex">
-            <div class="founder-content">
-                <h2 class="section-title">Meet the Founder</h2>
-                <p class="founder-quote">"Everything we do is rooted in the belief that trust is earned through integrity and that growth never stops."</p>
-                <p class="founder-name">— Dhwani Bhatia, Founder & Principal Consultant</p>
+    <section id="values" class="values-bar">
+        <div class="container">
+            <div class="values-flex">
+                <div class="v-item"><strong>TRUST</strong> Integrity & Transparency</div>
+                <div class="v-item"><strong>RESPECT</strong> Listening & Valuing Every Voice</div>
+                <div class="v-item"><strong>EMPOWERMENT</strong> Building Capacity</div>
+                <div class="v-item"><strong>LEARNING</strong> Innovation & AI Readiness</div>
             </div>
         </div>
     </section>
@@ -68,15 +69,37 @@
     <section id="services" class="services-section">
         <div class="container">
             <div class="section-header">
-                <h2>Practice Areas</h2>
+                <h2>Our Services</h2>
+                <p>Comprehensive HR strategies to optimize, protect, and scale your workforce.</p>
                 <div class="line"></div>
             </div>
+            
             <div class="services-grid">
-                <div class="s-card"><h3>Talent & Growth</h3><p>Recruitment, Training, and Leadership & Succession Coaching.</p></div>
-                <div class="s-card"><h3>Performance</h3><p>Performance Frameworks, Compensation, and HR Analytics.</p></div>
-                <div class="s-card"><h3>Compliance</h3><p>HR Audits, Policy Development, and Regulatory Alignment.</p></div>
-                <div class="s-card"><h3>Culture</h3><p>Strategic Planning, Change Management, and Conflict Resolution.</p></div>
-                <div class="s-card highlight-card"><h3>Future-Ready HR</h3><p>IDEA Practices and Digital Transformation with AI Technology.</p></div>
+                <div class="s-card">
+                    <i class="fa-solid fa-users-line s-icon"></i>
+                    <h3>Talent Acquisition</h3>
+                    <p>Recruitment, Talent Management, and Leadership & Succession Coaching.</p>
+                </div>
+                <div class="s-card">
+                    <i class="fa-solid fa-chart-line s-icon"></i>
+                    <h3>Effectiveness</h3>
+                    <p>Performance Management, Compensation, and Data-Driven HR Analytics.</p>
+                </div>
+                <div class="s-card">
+                    <i class="fa-solid fa-shield-check s-icon"></i>
+                    <h3>Compliance</h3>
+                    <p>HR Audits, Regulatory Risk Mitigation, and Policy Development.</p>
+                </div>
+                <div class="s-card">
+                    <i class="fa-solid fa-handshake-simple s-icon"></i>
+                    <h3>Culture & Change</h3>
+                    <p>Strategic Planning, Change Management, and Conflict Resolution Services.</p>
+                </div>
+                <div class="s-card dark-card">
+                    <i class="fa-solid fa-microchip s-icon"></i>
+                    <h3>Future-Ready HR</h3>
+                    <p>IDEA Practices and Digital Transformation with AI & Emerging Technology.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -84,19 +107,18 @@
     <footer id="contact" class="footer-main">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-info">
+                <div class="footer-brand">
                     <div class="logo">INKA <span>CONSULTING</span></div>
-                    <p>Building high-performing, inclusive workplaces.</p>
+                    <p>Virtual HR Services Across Canada</p>
                 </div>
-                <div class="footer-details">
-                    <h4>Get In Touch</h4>
-                    <p><strong>P:</strong> <a href="tel:7056908066">705.690.8066</a></p>
-                    <p><strong>E:</strong> <a href="mailto:info@inkaconsulting.ca">info@inkaconsulting.ca</a></p>
-                    <p><strong>Office:</strong> Virtual Services Across Canada</p>
+                <div class="footer-contact">
+                    <h4>Direct Connection</h4>
+                    <p><i class="fa fa-phone"></i> <a href="tel:7056908066">705.690.8066</a></p>
+                    <p><i class="fa fa-envelope"></i> <a href="mailto:info@inkaconsulting.ca">info@inkaconsulting.ca</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Inka Consulting. All rights reserved.</p>
+                <p>&copy; 2026 Inka Consulting | Founder: Dhwani Bhatia</p>
             </div>
         </div>
     </footer>
