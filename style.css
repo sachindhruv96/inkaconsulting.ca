@@ -1,77 +1,76 @@
-/* Inka Consulting Brand Identity */
 :root {
     --navy: #020c45;
     --peach: #ffd9c2;
-    --pink-tint: #f5f3f5;
+    --pink: #f5f3f5;
     --white: #ffffff;
-    --font-header: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --header-f: 'Playfair Display', serif;
+    --body-f: 'Inter', sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body { 
-    font-family: var(--font-body); 
+    font-family: var(--body-f); 
     font-size: 12pt; 
     color: var(--navy); 
-    background-color: var(--pink-tint);
-    line-height: 1.6;
+    background-color: var(--white);
+    line-height: 1.7;
 }
 
-.container { width: 90%; max-width: 1100px; margin: auto; }
-.section-padding { padding: 80px 0; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 2pt 0; }
 
-/* Typography */
-h1 { font-family: var(--font-header); font-size: 32pt; margin-bottom: 20px; }
-h2 { font-family: var(--font-header); font-size: 25pt; margin-bottom: 15px; }
-h3 { font-family: var(--font-body); font-size: 18pt; font-weight: 600; }
+/* Navigation */
+.navbar { padding: 25px 0; background: var(--white); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(2, 12, 69, 0.05); }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--header-f); font-size: 20pt; font-weight: 800; letter-spacing: 1px; color: var(--navy); }
+.logo span { font-weight: 300; font-size: 14pt; color: #555; }
+.nav-links { list-style: none; display: flex; align-items: center; }
+.nav-links li a { text-decoration: none; color: var(--navy); margin-left: 35px; font-weight: 600; font-size: 9pt; text-transform: uppercase; letter-spacing: 1px; }
+.btn-cta { background: var(--navy); color: var(--white) !important; padding: 12px 24px; border-radius: 2px; }
 
-/* Navbar */
-.navbar {
-    display: flex; 
-    justify-content: space-between; 
-    padding: 20px 5%; 
-    background: var(--white);
-    position: sticky; top: 0; z-index: 100;
+/* Hero */
+.hero { padding: 120px 0; background: var(--pink); }
+.hero-flex { display: flex; align-items: center; gap: 60px; }
+.hero-text { flex: 1.2; }
+.hero-image { flex: 0.8; }
+.hero-image img { width: 100%; border-radius: 4px; box-shadow: 15px 15px 0px var(--peach); }
+.badge { display: inline-block; padding: 6px 14px; background: var(--peach); font-size: 8pt; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+h1 { font-family: var(--header-f); font-size: 48pt; line-height: 1.1; margin-bottom: 25px; }
+h1 span { color: #5a66a8; font-style: italic; }
+.hero-text p { font-size: 14pt; margin-bottom: 40px; color: #444; max-width: 90%; }
+.btn-primary { background: var(--navy); color: var(--white); padding: 20px 40px; text-decoration: none; font-weight: 700; display: inline-block; margin-right: 15px; }
+.btn-secondary { color: var(--navy); text-decoration: underline; font-weight: 700; }
+
+/* Intro Sections */
+.intro-section { padding: 100px 0; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.label { font-size: 9pt; text-transform: uppercase; color: #888; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+.intro-box h2 { font-family: var(--header-f); font-size: 28pt; margin-bottom: 20px; }
+
+/* Founder Highlight */
+.founder-section { padding: 80px 0; background: var(--navy); color: var(--white); text-align: center; }
+.founder-quote { font-family: var(--header-f); font-size: 22pt; font-style: italic; margin-bottom: 20px; line-height: 1.4; color: var(--peach); }
+.founder-name { font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 10pt; }
+
+/* Services */
+.services-section { padding: 120px 0; }
+.line { width: 50px; height: 4px; background: var(--peach); margin: 20px auto 60px; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.s-card { padding: 45px; border: 1px solid #f0f0f0; background: #fff; }
+.s-card h3 { font-family: var(--header-f); font-size: 18pt; margin-bottom: 15px; }
+.highlight-card { background: var(--pink); border: none; }
+
+/* Footer */
+.footer-main { background: #fafafa; padding: 80px 0 40px; border-top: 1px solid #eee; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; margin-bottom: 60px; }
+.footer-details h4 { text-transform: uppercase; font-size: 9pt; letter-spacing: 2px; margin-bottom: 20px; }
+.footer-details p { margin-bottom: 10px; font-size: 11pt; }
+.footer-details a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--peach); }
+.footer-bottom { border-top: 1px solid #eee; padding-top: 30px; text-align: center; font-size: 9pt; color: #888; }
+
+@media (max-width: 768px) {
+    .hero-flex, .intro-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    h1 { font-size: 34pt; }
+    .hero-image { order: -1; }
 }
-
-.navbar .logo { font-family: var(--font-header); font-size: 20pt; font-weight: 700; }
-.navbar nav a { text-decoration: none; color: var(--navy); margin-left: 20px; font-weight: 600; }
-
-/* Hero Section */
-.hero {
-    height: 70vh;
-    background: var(--navy);
-    color: var(--peach);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 0 10%;
-}
-
-.btn-primary {
-    display: inline-block;
-    background: var(--peach);
-    color: var(--navy);
-    padding: 15px 30px;
-    text-decoration: none;
-    margin-top: 20px;
-    font-weight: 700;
-    border-radius: 5px;
-}
-
-/* Grids */
-.grid-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.grid-four { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-
-.card, .value-box, .service-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.highlight { background: var(--navy); color: var(--white); }
-.section-title { text-align: center; margin-bottom: 50px; }
-
-footer { background: var(--navy); color: var(--white); padding: 40px; text-align: center; }
