@@ -147,8 +147,10 @@ blockquote {
 #infinite {
 	background-color: #222;
   background-image: url(../img/infinite-loop-01.jpg);
-  background-repeat: no-repeat;
-	background-attachment: fixed;
+ min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-height: 600px) and (min-width: 1920px) {
