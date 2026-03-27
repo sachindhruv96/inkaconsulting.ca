@@ -1,64 +1,49 @@
-/* Tooplate 2117 Infinite Loop - Inka Consulting Theme */
-:root {
-  --navy: #020c45;
-  --peach: #ffd9c2;
-  --pink-bg: #f5f3f5;
-  --white: #ffffff;
-}
-
 body {
-  font-family: 'Inter', sans-serif;
-  font-size: 12pt;
-  overflow-x: hidden;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	overflow-x: hidden;
 }
 
-/* Parallax Effect (The Template Standard) */
+a { transition: all 0.3s ease; }
+
+/* Parallax Sections */
 .tm-parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80');
+  background-image: url('https://www.tooplate.com/templates/2117_infinite_loop/img/infinite-loop-01.jpg');
   height: 100vh;
-  position: relative;
 }
 
 .tm-parallax-2 {
   background-attachment: fixed;
-  background-image: url('https://images.unsplash.com/photo-1454165833767-027ffea9e78b?auto=format&fit=crop&w=1600&q=80');
-  padding: 100px 0;
-  position: relative;
+  background-image: url('https://www.tooplate.com/templates/2117_infinite_loop/img/infinite-loop-02.jpg');
+  background-size: cover;
 }
 
-.tm-bg-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(2, 12, 69, 0.8);
-  z-index: 1;
-}
-
-/* Header & Nav */
+/* Navbar */
 .tm-navbar {
   position: fixed;
   width: 100%;
   z-index: 1000;
+  background-color: transparent;
   transition: all 0.3s ease;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .tm-navbar.scroll {
-  background-color: var(--white);
+  background-color: white;
   padding: 10px 0;
   box-shadow: 0 1px 10px rgba(0,0,0,0.1);
 }
 
-.navbar-brand { font-family: 'Playfair Display', serif; font-weight: 800; color: var(--peach) !important; font-size: 22pt; }
-.navbar-brand span { font-weight: 300; font-size: 14pt; color: var(--white); }
-.tm-navbar.scroll .navbar-brand { color: var(--navy) !important; }
-.tm-navbar.scroll .navbar-brand span { color: #666; }
+.navbar-brand { font-size: 1.6rem; font-weight: bold; color: white !important; }
+.tm-navbar.scroll .navbar-brand { color: #369 !important; }
 
-.nav-link { color: var(--white) !important; font-weight: 600; text-transform: uppercase; margin-left: 20px; }
-.tm-navbar.scroll .nav-link { color: var(--navy) !important; }
+.nav-link { color: white !important; }
+.tm-navbar.scroll .nav-link { color: #369 !important; }
 
 /* Hero Text */
 .tm-hero-text-container {
@@ -67,32 +52,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 2;
 }
 
-.tm-hero-title { font-family: 'Playfair Display', serif; font-size: 48pt; font-weight: 800; color: var(--peach); }
-.tm-hero-subtitle { font-size: 16pt; margin-top: 20px; }
+.tm-hero-title { font-size: 4rem; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+.tm-hero-subtitle { font-size: 1.5rem; margin-top: 20px; }
 
-/* Content Padding (Template standard) */
-.tm-section-pad-top { padding-top: 100px; padding-bottom: 100px; }
-.tm-text-primary { color: var(--navy); font-family: 'Playfair Display', serif; font-weight: 700; }
-.tm-section-title { font-size: 32pt; }
+/* General Padding */
+.tm-section-pad-top { padding-top: 140px; padding-bottom: 140px; }
+.tm-text-primary { color: #369; }
+.tm-section-title { font-size: 2.6rem; font-weight: bold; }
 
-/* Service Cards / Honey Effect */
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.tm-gallery-item { 
-    height: 250px; background: var(--navy); 
-    display: flex; align-items: center; justify-content: center; 
-    border: 2px solid var(--peach); color: var(--white);
+/* Forms */
+.tm-input {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  background: transparent;
 }
 
-/* Contact Footer */
-.tm-parallax-3 { background-color: var(--pink-bg); padding: 80px 0; }
-.contact-item { margin-bottom: 20px; display: block; }
-.item-link { color: var(--navy); text-decoration: none; display: flex; align-items: center; }
-
-@media (max-width: 768px) {
-  .tm-hero-title { font-size: 32pt; }
-  .grid { grid-template-columns: 1fr; }
+.tm-btn-submit {
+  background-color: #369;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 0;
+  text-transform: uppercase;
 }
