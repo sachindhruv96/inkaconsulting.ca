@@ -3,76 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inka Consulting | People-First HR Solutions</title>
+    <title>Inka Consulting | Strategic HR Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">Inka Consulting</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact" class="btn-nav">Contact</a>
-        </nav>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">INKA <span>CONSULTING</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:7056908066" class="btn-cta">705.690.8066</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <span class="badge">Boutique HR Consultancy</span>
+                <h1>Unlocking the potential of your <span>greatest asset.</span></h1>
+                <p>Led by Dhwani Bhatia, we partner with organizations to build people-first workplaces through expert, forward-thinking HR solutions.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn-primary">Our Practice Areas</a>
+                    <a href="#contact" class="btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Inka Consulting Leadership">
+            </div>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Partnering to Build People-First Workplaces</h1>
-            <p>Delivering expert, forward-thinking HR solutions — from recruitment to digital transformation.</p>
-            <a href="#contact" class="btn-primary">Get Started</a>
-        </div>
-    </section>
-
-    <section id="about" class="container section-padding">
-        <div class="grid-two">
-            <div class="card">
-                <h2>Our Mission</h2>
-                <p>We partner with organizations to build people-first workplaces by delivering expert, forward-thinking HR solutions. Grounded in trust, respect, empowerment, and continuous learning.</p>
+    <section id="about" class="intro-section">
+        <div class="container intro-grid">
+            <div class="intro-box">
+                <span class="label">Our Mission</span>
+                <h2>Building People-First Workplaces</h2>
+                <p>We deliver expert HR solutions — from recruitment and compliance to leadership development. Grounded in trust, respect, and empowerment, we help clients unlock their full potential.</p>
             </div>
-            <div class="card">
-                <h2>Our Vision</h2>
-                <p>To be the most trusted HR consulting partner for organizations that believe their people are their competitive advantage.</p>
+            <div class="intro-box">
+                <span class="label">Our Vision</span>
+                <h2>The Trusted Partner</h2>
+                <p>To be the most trusted HR consulting partner for organizations that believe their people are their competitive advantage — shaping inclusive, agile, and high-performing teams.</p>
             </div>
         </div>
     </section>
 
-    <section class="values-section">
+    <section class="founder-section">
+        <div class="container founder-flex">
+            <div class="founder-content">
+                <h2 class="section-title">Meet the Founder</h2>
+                <p class="founder-quote">"Everything we do is rooted in the belief that trust is earned through integrity and that growth never stops."</p>
+                <p class="founder-name">— Dhwani Bhatia, Founder & Principal Consultant</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
         <div class="container">
-            <h2 class="section-title">Our Values</h2>
-            <div class="grid-four">
-                <div class="value-box"><h3>Trust</h3><p>Built on honesty and accountability.</p></div>
-                <div class="value-box"><h3>Respect</h3><p>Honoring the humanity in everyone.</p></div>
-                <div class="value-box"><h3>Empowerment</h3><p>Building capacity and confidence.</p></div>
-                <div class="value-box"><h3>Learning</h3><p>Staying at the forefront of innovation.</p></div>
+            <div class="section-header">
+                <h2>Practice Areas</h2>
+                <div class="line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="s-card"><h3>Talent & Growth</h3><p>Recruitment, Training, and Leadership & Succession Coaching.</p></div>
+                <div class="s-card"><h3>Performance</h3><p>Performance Frameworks, Compensation, and HR Analytics.</p></div>
+                <div class="s-card"><h3>Compliance</h3><p>HR Audits, Policy Development, and Regulatory Alignment.</p></div>
+                <div class="s-card"><h3>Culture</h3><p>Strategic Planning, Change Management, and Conflict Resolution.</p></div>
+                <div class="s-card highlight-card"><h3>Future-Ready HR</h3><p>IDEA Practices and Digital Transformation with AI Technology.</p></div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="container section-padding">
-        <h2 class="section-title">Practice Areas</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Talent & Growth</h3>
-                <p>Recruitment, Training, and Leadership Coaching.</p>
+    <footer id="contact" class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="logo">INKA <span>CONSULTING</span></div>
+                    <p>Building high-performing, inclusive workplaces.</p>
+                </div>
+                <div class="footer-details">
+                    <h4>Get In Touch</h4>
+                    <p><strong>P:</strong> <a href="tel:7056908066">705.690.8066</a></p>
+                    <p><strong>E:</strong> <a href="mailto:info@inkaconsulting.ca">info@inkaconsulting.ca</a></p>
+                    <p><strong>Office:</strong> Virtual Services Across Canada</p>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Performance</h3>
-                <p>Frameworks, Compensation, and HR Analytics.</p>
-            </div>
-            <div class="service-card highlight">
-                <h3>Future-Ready HR</h3>
-                <p>IDEA Practices and Digital Transformation with AI.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Inka Consulting. All rights reserved.</p>
             </div>
         </div>
-    </section>
-
-    <footer id="contact">
-        <p>&copy; 2026 Inka Consulting. All rights reserved.</p>
     </footer>
 
 </body>
