@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <style>
+        /* Essential Designer Overrides for Visibility */
+        .inka-values-bg { background-color: #020c45; color: #ffffff; padding: 100px 0; }
+        .practice-card { border: 1px solid #eee; padding: 30px; height: 100%; transition: 0.3s; background: #fff; }
+        .practice-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: #369; }
+        .founder-image { border: 10px solid rgba(255,255,255,0.1); border-radius: 50%; max-width: 300px; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+    </style>
 </head>
 <body>    
     <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
@@ -24,8 +31,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item"><a class="nav-link tm-nav-link" href="#infinite">Home</a></li>
-              <li class="nav-item"><a class="nav-link tm-nav-link" href="#mission">Mission & Vision</a></li>
-              <li class="nav-item"><a class="nav-link tm-nav-link" href="#values">Our Values</a></li>
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#mission">Mission</a></li>
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#values">Values</a></li>
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#founder">The Founder</a></li>
               <li class="nav-item"><a class="nav-link tm-nav-link" href="#services">Practice Areas</a></li>
               <li class="nav-item"><a class="nav-link tm-nav-link" href="#contact">Contact</a></li>                    
             </ul>
@@ -52,23 +60,21 @@
 
     <section id="mission" class="tm-section-pad-top">
       <div class="container">
-            <div class="row tm-content-box">
-                <div class="col-lg-12">
-                    <div class="tm-intro-text-container">
-                        <h2 class="tm-text-primary mb-4 tm-section-title">Our Mission</h2>
-                        <p class="mb-5 tm-intro-text">
-                          We partner with organizations to build <strong>people-first workplaces</strong> by delivering expert, forward-thinking HR solutions — from recruitment and compliance to leadership development and digital transformation. Grounded in trust, respect, empowerment, and continuous learning, we help our clients unlock the full potential of their greatest asset: their people.
-                        </p>
-                    </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <h2 class="tm-text-primary mb-4 tm-section-title">Our Mission</h2>
+                    <p class="tm-intro-text">
+                        We partner with organizations to build people-first workplaces by delivering expert, forward-thinking HR solutions — from recruitment and compliance to leadership development and digital transformation.
+                    </p>
+                    <p class="tm-intro-text">
+                        Grounded in trust, respect, empowerment, and continuous learning, we help our clients unlock the full potential of their greatest asset: their people.
+                    </p>
                 </div>
-            </div>
-            
-            <div class="row tm-content-box">
-                <div class="col-lg-12">
-                    <div class="tm-intro-text-container" style="background-color: #f9f9f9; padding: 40px; border-left: 5px solid #369;">
+                <div class="col-lg-6">
+                    <div class="p-5" style="background-color: #f4f6f9; border-radius: 10px;">
                         <h2 class="tm-text-primary mb-4">Our Vision</h2>
                         <p class="tm-intro-text">
-                          To be the most trusted HR consulting partner for organizations that believe their people are their competitive advantage — shaping inclusive, agile, and high-performing workplaces where every individual and team can thrive.
+                            To be the most trusted HR consulting partner for organizations that believe their people are their competitive advantage — shaping inclusive, agile, and high-performing workplaces where every individual and team can thrive.
                         </p>
                     </div>
                 </div>
@@ -76,107 +82,92 @@
       </div>
     </section>
 
-    <section id="values" class="tm-section-pad-top tm-parallax-2">
-        <div class="container text-white">
-            <div class="row">
+    <section id="values" class="inka-values-bg">
+        <div class="container">
+            <div class="row mb-5">
                 <div class="col-12 text-center">
-                    <h2 class="mb-4 tm-section-title">Our Values</h2>
-                    <p class="mb-5">Everything we do is rooted in four foundational beliefs that define who we are.</p>
+                    <h2 class="tm-section-title mb-4">Our Values</h2>
+                    <p style="max-width: 800px; margin: 0 auto; opacity: 0.9;">
+                        Everything we do is rooted in four foundational beliefs that don't just guide how we work — they define who we are.
+                    </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 text-center mb-4">
-                    <i class="fas fa-3x fa-shield-alt mb-3"></i>
-                    <h3>Trust</h3>
-                    <p class="small">Built on honesty, consistency, and accountability. We do what we say.</p>
+                <div class="col-md-3 mb-4">
+                    <h4 style="color: #369;">TRUST</h4>
+                    <p class="small">We believe that great partnerships are built on honesty, consistency, and accountability. We say what we mean, and we do what we say.</p>
                 </div>
-                <div class="col-md-3 text-center mb-4">
-                    <i class="fas fa-3x fa-heart mb-3"></i>
-                    <h3>Respect</h3>
-                    <p class="small">We honor humanity in every individual and value every perspective.</p>
+                <div class="col-md-3 mb-4">
+                    <h4 style="color: #369;">RESPECT</h4>
+                    <p class="small">We honor the humanity in every individual. We listen before we speak and create spaces where every voice is valued.</p>
                 </div>
-                <div class="col-md-3 text-center mb-4">
-                    <i class="fas fa-3x fa-seedling mb-3"></i>
-                    <h3>Empowerment</h3>
-                    <p class="small">We build capacity, leaving clients stronger and more capable.</p>
+                <div class="col-md-3 mb-4">
+                    <h4 style="color: #369;">EMPOWERMENT</h4>
+                    <p class="small">We don't just solve problems — we build capacity. We equip people with the tools and confidence to lead and succeed.</p>
                 </div>
-                <div class="col-md-3 text-center mb-4">
-                    <i class="fas fa-3x fa-brain mb-3"></i>
-                    <h3>Constant Learning</h3>
-                    <p class="small">Staying at the forefront of innovation, from technology to AI.</p>
+                <div class="col-md-3 mb-4">
+                    <h4 style="color: #369;">CONSTANT LEARNING</h4>
+                    <p class="small">We stay at the forefront of HR innovation — from emerging technology and AI to evolving best practices in DEI.</p>
                 </div>
             </div>
         </div>
-        <div class="tm-bg-overlay"></div>
     </section>
 
-    <section id="services" class="tm-section-pad-top">
-      <div class="container">
-        <div class="row">
-          <div class="text-center col-12">
-              <h2 class="tm-text-primary tm-section-title mb-4">Overview of Services</h2>
-              <p class="mx-auto tm-section-desc mb-5">
-                Strategic HR Practice Areas designed to lead your organization into the future of work.
-              </p>
-          </div>            
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6 mb-5">
-                <div class="p-4 border">
-                    <h4 class="tm-text-primary">1. Talent Acquisition & People Growth</h4>
-                    <p class="small text-muted italic mb-3">Finding the right people and helping them flourish.</p>
-                    <ul class="small">
-                        <li><strong>Recruitment & Talent Management:</strong> Attract and retain top talent aligned with your culture.</li>
-                        <li><strong>Training & Development:</strong> Building capability at every level.</li>
-                        <li><strong>Leadership & Succession:</strong> Developing your next generation of leaders.</li>
-                    </ul>
+    <section id="founder" class="tm-section-pad-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center mb-5 mb-md-0">
+                    <img src="img/founder.jpg" alt="Dhwani Bhatia" class="founder-image">
                 </div>
-            </div>
-            <div class="col-md-6 mb-5">
-                <div class="p-4 border">
-                    <h4 class="tm-text-primary">2. Performance & Effectiveness</h4>
-                    <p class="small text-muted italic mb-3">Building systems that bring out the best in people.</p>
-                    <ul class="small">
-                        <li><strong>Performance Frameworks:</strong> Fair, motivating, and continuous dialogue.</li>
-                        <li><strong>Compensation & Benefits:</strong> Equitable structures that reward performance.</li>
-                        <li><strong>HR Analytics:</strong> Evidence-based insights for your workforce.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5">
-                <div class="p-4 border">
-                    <h4 class="tm-text-primary">3. Foundations & Compliance</h4>
-                    <p class="small text-muted italic mb-3">Getting the fundamentals right to grow with confidence.</p>
-                    <ul class="small">
-                        <li><strong>HR Audits:</strong> Identifying gaps and ensuring regulatory compliance.</li>
-                        <li><strong>Policy Development:</strong> Scaling practical policies with your growth.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5">
-                <div class="p-4 border">
-                    <h4 class="tm-text-primary">4. Culture & Strategic Planning</h4>
-                    <p class="small text-muted italic mb-3">Shaping the workplace your business needs.</p>
-                    <ul class="small">
-                        <li><strong>Culture Strategy:</strong> Building inclusive, intentional workplaces.</li>
-                        <li><strong>Change Management:</strong> Guiding organizations through transitions.</li>
-                        <li><strong>Conflict Resolution:</strong> Skilled mediation and neutral facilitation.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="p-4 border" style="background-color: #f0f4f8;">
-                    <h4 class="tm-text-primary text-center">5. Inclusion, Digital Transformation & Future-Ready HR</h4>
-                    <p class="text-center small text-muted italic mb-3">Leading your organization into the future of work.</p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="small"><strong>IDEA Practices:</strong> Making inclusion a lived experience through Inclusion, Diversity, Equity & Accessibility.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="small"><strong>AI & Technology:</strong> Modernizing HR operations with human-centered emerging technology.</p>
-                        </div>
+                <div class="col-md-7">
+                    <h2 class="tm-text-primary mb-3">Dhwani Bhatia</h2>
+                    <p class="text-muted mb-4" style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">Founder & Principal Consultant</p>
+                    <p class="mb-4">With over 15 years of experience leading People & Culture functions, Dhwani founded Inka Consulting to bridge the gap between organizational goals and human potential. Her expertise spans scaling startups, digital transformations, and AI readiness.</p>
+                    <div style="border-left: 4px solid #369; padding-left: 20px; font-style: italic; font-size: 1.2rem;">
+                        "We don't just solve problems — we build capacity. Our goal is to leave every organization stronger and more capable than when we found them."
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="tm-section-pad-top" style="background-color: #fcfcfc;">
+      <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="tm-text-primary tm-section-title">Practice Areas</h2>
+                <p class="mt-3">Comprehensive strategies to optimize, protect, and scale your workforce.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="practice-card">
+                    <h5 class="tm-text-primary">1. Talent Acquisition</h5>
+                    <p class="small">Recruitment, Onboarding, and Succession Planning to build top-tier pipelines.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="practice-card">
+                    <h5 class="tm-text-primary">2. Performance Management</h5>
+                    <p class="small">Motivating frameworks, equitable compensation, and HR Analytics insights.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="practice-card">
+                    <h5 class="tm-text-primary">3. HR Foundations</h5>
+                    <p class="small">HR Audits, regulatory compliance, and practical policy development.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="practice-card">
+                    <h5 class="tm-text-primary">4. Culture & Change</h5>
+                    <p class="small">Strategic planning, restructuring support, and conflict mediation.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-8 mb-4">
+                <div class="practice-card" style="background: #369; color: #fff;">
+                    <h5 class="text-white">5. Future-Ready HR & AI</h5>
+                    <p class="small">Inclusion (IDEA) practices and Digital Transformation using AI to modernize your human-centered workplace.</p>
                 </div>
             </div>
         </div>
@@ -184,46 +175,31 @@
     </section>
 
     <section id="contact" class="tm-section-pad-top tm-parallax-2">
-      <div class="container tm-container-contact">
+      <div class="container">
         <div class="row">
-            <div class="text-center col-12">
+            <div class="col-12 text-center text-white">
                 <h2 class="tm-section-title mb-4">Contact Us</h2>
-                <p class="mb-5">Ready to transform your workplace? Reach out to us today to discuss your vision.</p>
+                <p class="mb-5">Ready to transform your workplace? Reach out today.</p>
             </div>
-            <div class="col-sm-12 col-md-6">
-              <form action="" method="get">
-                <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
-                <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
-                <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
-                <button type="submit" class="btn tm-btn-submit">Submit</button>
-              </form>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="contact-item">
-                  <a href="mailto:info@inkaconsulting.ca" class="item-link">
-                      <i class="far fa-2x fa-envelope mr-4"></i>
-                      <span class="mb-0">info@inkaconsulting.ca</span>
-                  </a>              
-                </div>
-                <div class="contact-item">
-                  <a href="tel:7056908066" class="item-link">
-                      <i class="fas fa-2x fa-phone-square mr-4"></i>
-                      <span class="mb-0">705.690.8066</span>
-                  </a>              
-                </div>
+            <div class="col-md-6 text-white">
+                <p><i class="fas fa-envelope mr-3"></i> info@inkaconsulting.ca</p>
+                <p><i class="fas fa-phone mr-3"></i> 705.690.8066</p>
+                <p><i class="fas fa-map-marker-alt mr-3"></i> Virtual Office - Serving Canada</p>
             </div>
         </div>
       </div>
-      <footer class="text-center small tm-footer">
-          <p class="mb-0">Copyright &copy; 2026 Inka Consulting. All Rights Reserved.</p>
+      <footer class="text-center mt-5 py-4 border-top">
+          <p class="text-white small mb-0">Copyright &copy; 2026 Inka Consulting. All Rights Reserved.</p>
       </footer>
     </section>
 
     <script src="js/jquery-1.9.1.min.js"></script>     
-    <script src="slick/slick.min.js"></script>
-    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/easing.min.js"></script>
-    <script src="js/jquery.singlePageNav.min.js"></script>     
     <script src="js/bootstrap.min.js"></script> 
-    </body>
+    <script src="js/jquery.singlePageNav.min.js"></script> 
+    <script>
+      $(function(){
+        $('#tmNav').singlePageNav();
+      });
+    </script>
+</body>
 </html>
