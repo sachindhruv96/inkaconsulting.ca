@@ -669,4 +669,34 @@ p {
     color: #369;
     font-weight: bold;
 }
+	/*
+ * Inka Consulting 2026 Brand Standards
+ * Primary: Navy (#020C45)
+ * Accent: Impact Red (#E13333)
+ */
+
+/* Typography Overrides */
+h1, h2, h3, h4, .navbar-brand {
+    color: #020C45; /* Foundational Navy on all Headings */
+    text-transform: none; /* Maintains lowercase branding if applied in HTML */
+}
+
+/* Primary Conversion Buttons */
+.tm-btn-primary {
+    background-color: #E13333; /* Impact Red */
+    border-color: #E13333;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.tm-btn-primary:hover, .tm-btn-primary:focus {
+    background-color: #C02929; /* Slightly darker red for tactile feedback */
+    border-color: #C02929;
+    color: #ffffff;
+}
+
+/* Subtle Underline for Active Nav */
+.navbar-nav .nav-link.active::after {
+    background-color: #E13333; /* Subtly calls out active section */
+}
 }
