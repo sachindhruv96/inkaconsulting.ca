@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future-Ready HR & AI | Inka Consulting</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/tooplate-infinite-loop.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future-Ready HR | Inka Consulting</title>
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <style>
+        .service-hero-section { background: linear-gradient(rgba(2,12,69,0.85), rgba(2,12,69,0.85)), url('img/tech-hero.jpg'); background-size: cover; background-position: center; color: white; padding: 180px 0 100px; text-align: center; }
+        .service-row { padding: 100px 0; align-items: center; border-bottom: 1px solid #f0f0f0; }
+        @media (min-width: 768px) { .row-reverse-desktop { flex-direction: row-reverse; } }
+        .service-image-container img { width: 100%; border-radius: 15px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+        .service-text-content h3 { color: #020c45; font-weight: 700; margin-bottom: 25px; font-size: 2rem; }
+        .service-text-content p { font-size: 1.1rem; line-height: 1.8; color: #555; }
+        .intro-quote { max-width: 800px; margin: -40px auto 60px; background: #fff; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #369; font-style: italic; font-size: 1.3rem; position: relative; z-index: 10; }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md tm-navbar scroll">
         <div class="container">
             <a href="index.html" class="navbar-brand">Inka <span>Consulting</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <i class="fas fa-bars navbar-toggler-icon"></i>
-            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html#infinite">Home</a></li>
                     <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html#mission">Mission</a></li>
                     <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html#values">Values</a></li>
                     <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html#founder">The Founder</a></li>
-                    
                     <li class="nav-item dropdown">
-                        <a class="nav-link tm-nav-link dropdown-toggle" href="#" id="subDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Practice Areas
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="subDropdown">
+                        <a class="nav-link tm-nav-link dropdown-toggle" href="#" id="navDrop" data-toggle="dropdown">Practice Areas</a>
+                        <div class="dropdown-menu">
                             <a class="dropdown-item" href="talent-growth.html">Talent Acquisition</a>
                             <a class="dropdown-item" href="performance-effectiveness.html">Performance Management</a>
                             <a class="dropdown-item" href="hr-foundations.html">HR Foundations</a>
@@ -33,41 +38,40 @@
                             <a class="dropdown-item" href="future-ready-hr.html">Future-Ready HR & AI</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link tm-nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <header class="service-hero-section">
-        <div class="container">
-            <h1 class="display-4 font-weight-bold">Inclusion, Digital Transformation & Future-Ready HR</h1>
-        </div>
+        <div class="container"><h1 class="display-3 font-weight-bold">Inclusion & Future-Ready HR</h1></div>
     </header>
 
-    <main class="container tm-section-pad-top">
-        <div class="service-intro-box text-center">
-            "Leading your organization into the future of work."
+    <main class="container">
+        <div class="intro-quote text-center">"Leading your organization into the future of work."</div>
+
+        <div class="row service-row">
+            <div class="col-md-6 service-text-content">
+                <h3>IDEA Practices</h3>
+                <p>Inclusion, Diversity, Equity, and Accessibility are not just buzzwords; they are competitive advantages. We provide the strategy and implementation tools to ensure your workplace is one where every individual belongs and can thrive.</p>
+            </div>
+            <div class="col-md-6 service-image-container"><img src="img/tech-1.jpg" alt="IDEA Strategy"></div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="pillar-card">
-                    <h3 class="pillar-title">IDEA Practices</h3>
-                    <p>We help you build workplaces where every individual belongs, contributes, and thrives. From strategy to implementation, we make inclusion a lived experience, not just a policy.</p>
-                </div>
+        <div class="row service-row row-reverse-desktop">
+            <div class="col-md-6 service-text-content">
+                <h3>AI & Digital Transformation</h3>
+                <p>We help you navigate the evolving landscape of HR technology. By implementing AI-driven tools and digital processes, we automate the routine so your HR team can focus on what they do best: human-centered strategy.</p>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="pillar-card">
-                    <h3 class="pillar-title">Digital Transformation & AI</h3>
-                    <p>We help organizations harness the power of emerging technology and AI tools to modernize HR operations, improve decision-making, and create more efficient, human-centered workplaces.</p>
-                </div>
-            </div>
+            <div class="col-md-6 service-image-container"><img src="img/tech-2.jpg" alt="Digital HR Transformation"></div>
         </div>
 
-        <div class="text-center mt-5 mb-5">
+        <div class="text-center mt-5 mb-5 pb-5">
+            <h4 class="mb-4">Is your organization future-ready?</h4>
             <a href="index.html#contact" class="tm-btn-primary">Connect with Dhwani</a>
         </div>
     </main>
+    <script src="js/jquery-1.9.1.min.js"></script><script src="js/bootstrap.min.js"></script>
 </body>
 </html>
