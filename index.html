@@ -12,11 +12,23 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
     <style>
-        /* Essential Designer Overrides for Visibility */
+        /* Essential Designer Overrides */
         .inka-values-bg { background-color: #020c45; color: #ffffff; padding: 100px 0; }
-        .practice-card { border: 1px solid #eee; padding: 30px; height: 100%; transition: 0.3s; background: #fff; }
+        .practice-card { border: 1px solid #eee; padding: 30px; height: 100%; transition: 0.3s; background: #fff; display: flex; flex-direction: column; justify-content: space-between; }
         .practice-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: #369; }
         .founder-image { border: 10px solid rgba(255,255,255,0.1); border-radius: 50%; max-width: 300px; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .btn-read-more { margin-top: 15px; align-self: flex-start; font-size: 0.85rem; padding: 8px 20px; border-radius: 4px; }
+
+        /* Dropdown Menu Styling */
+        .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
+        .dropdown-menu { background-color: #ffffff; border: none; border-radius: 0; box-shadow: 0 8px 15px rgba(0,0,0,0.1); padding: 10px 0; }
+        .dropdown-item { color: #369 !important; font-size: 0.9rem; padding: 10px 20px; transition: 0.3s; }
+        .dropdown-item:hover { background-color: #f8f9fa; color: #38B !important; padding-left: 25px; }
+        
+        @media (max-width: 991px) {
+            .dropdown-menu { background-color: transparent; box-shadow: none; border-left: 2px solid #369; margin-left: 20px; }
+            .dropdown-item { color: #fff !important; }
+        }
     </style>
 </head>
 <body>    
@@ -34,7 +46,20 @@
               <li class="nav-item"><a class="nav-link tm-nav-link" href="#mission">Mission</a></li>
               <li class="nav-item"><a class="nav-link tm-nav-link" href="#values">Values</a></li>
               <li class="nav-item"><a class="nav-link tm-nav-link" href="#founder">The Founder</a></li>
-              <li class="nav-item"><a class="nav-link tm-nav-link" href="#services">Practice Areas</a></li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link tm-nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Practice Areas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item external" href="talent-growth.html">Talent Acquisition</a>
+                  <a class="dropdown-item external" href="performance-effectiveness.html">Performance Management</a>
+                  <a class="dropdown-item external" href="hr-foundations.html">HR Foundations</a>
+                  <a class="dropdown-item external" href="strategic-planning.html">Culture & Change</a>
+                  <a class="dropdown-item external" href="future-ready-hr.html">Future-Ready HR & AI</a>
+                </div>
+              </li>
+
               <li class="nav-item"><a class="nav-link tm-nav-link" href="#contact">Contact</a></li>                    
             </ul>
           </div>        
@@ -51,7 +76,6 @@
             </p>
         </div>        
       </div>
-
     </section>
 
     <section id="mission" class="tm-section-pad-top">
@@ -84,26 +108,26 @@
                 <div class="col-12 text-center">
                     <h2 class="tm-section-title mb-4">Our Values</h2>
                     <p style="max-width: 800px; margin: 0 auto; opacity: 0.9;">
-                        Everything we do is rooted in four foundational beliefs that don't just guide how we work — they define who we are.
+                        Everything we do is rooted in four foundational beliefs that define who we are.
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <h4 style="color: #369;">TRUST</h4>
-                    <p class="small">We believe that great partnerships are built on honesty, consistency, and accountability. We say what we mean, and we do what we say.</p>
+                    <p class="small">Honesty, consistency, and accountability. We say what we mean, and we do what we say.</p>
                 </div>
                 <div class="col-md-3 mb-4">
                     <h4 style="color: #369;">RESPECT</h4>
-                    <p class="small">We honor the humanity in every individual. We listen before we speak and create spaces where every voice is valued.</p>
+                    <p class="small">We honor humanity in every individual. We listen first and value every voice.</p>
                 </div>
                 <div class="col-md-3 mb-4">
                     <h4 style="color: #369;">EMPOWERMENT</h4>
-                    <p class="small">We don't just solve problems — we build capacity. We equip people with the tools and confidence to lead and succeed.</p>
+                    <p class="small">We build capacity, equipping people with tools and confidence to lead and succeed.</p>
                 </div>
                 <div class="col-md-3 mb-4">
                     <h4 style="color: #369;">CONSTANT LEARNING</h4>
-                    <p class="small">We stay at the forefront of HR innovation — from emerging technology and AI to evolving best practices in DEI.</p>
+                    <p class="small">Staying at the forefront of innovation — from AI to evolving best practices in DEI.</p>
                 </div>
             </div>
         </div>
@@ -138,32 +162,47 @@
         <div class="row">
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="practice-card">
-                    <h5 class="tm-text-primary">1. Talent Acquisition</h5>
-                    <p class="small">Recruitment, Onboarding, and Succession Planning to build top-tier pipelines.</p>
+                    <div>
+                        <h5 class="tm-text-primary">1. Talent Acquisition</h5>
+                        <p class="small">Recruitment, Onboarding, and Succession Planning to build top-tier pipelines.</p>
+                    </div>
+                    <a href="talent-growth.html" class="tm-btn-primary btn-read-more">Read More</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="practice-card">
-                    <h5 class="tm-text-primary">2. Performance Management</h5>
-                    <p class="small">Motivating frameworks, equitable compensation, and HR Analytics insights.</p>
+                    <div>
+                        <h5 class="tm-text-primary">2. Performance Management</h5>
+                        <p class="small">Motivating frameworks, equitable compensation, and HR Analytics insights.</p>
+                    </div>
+                    <a href="performance-effectiveness.html" class="tm-btn-primary btn-read-more">Read More</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="practice-card">
-                    <h5 class="tm-text-primary">3. HR Foundations</h5>
-                    <p class="small">HR Audits, regulatory compliance, and practical policy development.</p>
+                    <div>
+                        <h5 class="tm-text-primary">3. HR Foundations</h5>
+                        <p class="small">HR Audits, regulatory compliance, and practical policy development.</p>
+                    </div>
+                    <a href="hr-foundations.html" class="tm-btn-primary btn-read-more">Read More</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="practice-card">
-                    <h5 class="tm-text-primary">4. Culture & Change</h5>
-                    <p class="small">Strategic planning, restructuring support, and conflict mediation.</p>
+                    <div>
+                        <h5 class="tm-text-primary">4. Culture & Change</h5>
+                        <p class="small">Strategic planning, restructuring support, and conflict mediation.</p>
+                    </div>
+                    <a href="strategic-planning.html" class="tm-btn-primary btn-read-more">Read More</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-8 mb-4">
-                <div class="practice-card" >
-                    <h5 class="tm-text-primary">5. Future-Ready HR & AI</h5>
-                    <p class="small">Inclusion (IDEA) practices and Digital Transformation using AI to modernize your human-centered workplace.</p>
+                <div class="practice-card">
+                    <div>
+                        <h5 class="tm-text-primary">5. Future-Ready HR & AI</h5>
+                        <p class="small">Inclusion (IDEA) practices and Digital Transformation using AI to modernize your human-centered workplace.</p>
+                    </div>
+                    <a href="future-ready-hr.html" class="tm-btn-primary btn-read-more">Read More</a>
                 </div>
             </div>
         </div>
@@ -171,55 +210,55 @@
     </section>
 
     <section id="contact" class="tm-section-pad-top tm-parallax-2">
-  <div class="container tm-container-contact">
-    <div class="row">
-        <div class="text-center col-12">
-            <h2 class="tm-section-title mb-4">Connect With Us</h2>
-            <p class="mb-5">Ready to transform your workplace? Reach out to start the conversation.</p>
-        </div>
-        
-        <div class="col-sm-12 col-md-6">
-            <div class="contact-item">
-              <a rel="nofollow" href="https://ca.linkedin.com/in/dhwanib" target="_blank" class="item-link">
-                  <i class="fab fa-2x fa-linkedin mr-4"></i>
-                  <span class="mb-0">Connect with Dhwani Bhatia</span>
-              </a>              
+      <div class="container tm-container-contact">
+        <div class="row">
+            <div class="text-center col-12">
+                <h2 class="tm-section-title mb-4">Connect With Us</h2>
+                <p class="mb-5">Ready to transform your workplace? Reach out to start the conversation.</p>
             </div>
-            
-            <div class="contact-item">
-              <a rel="nofollow" href="mailto:info@inkaconsulting.ca" class="item-link">
-                  <i class="far fa-2x fa-envelope mr-4"></i>
-                  <span class="mb-0">info@inkaconsulting.ca</span>
-              </a>              
+            <div class="col-sm-12 col-md-6">
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://ca.linkedin.com/in/dhwanib" target="_blank" class="item-link">
+                      <i class="fab fa-2x fa-linkedin mr-4"></i>
+                      <span class="mb-0">Connect with Dhwani Bhatia</span>
+                  </a>              
+                </div>
+                <div class="contact-item">
+                  <a rel="nofollow" href="mailto:info@inkaconsulting.ca" class="item-link">
+                      <i class="far fa-2x fa-envelope mr-4"></i>
+                      <span class="mb-0">info@inkaconsulting.ca</span>
+                  </a>              
+                </div>
             </div>
-        </div>
-        
-        <div class="col-sm-12 col-md-6">
-            <div class="contact-item">
-                <i class="fas fa-2x fa-phone-square mr-4"></i>
-                <span class="mb-0">705.690.8066</span>
-            </div>
-            
-            <div class="contact-item">
-                <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
-                <span class="mb-0">Virtual Office | Serving Canada</span>
+            <div class="col-sm-12 col-md-6">
+                <div class="contact-item">
+                    <i class="fas fa-2x fa-phone-square mr-4"></i>
+                    <span class="mb-0">705.690.8066</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
+                    <span class="mb-0">Virtual Office | Serving Canada</span>
+                </div>
             </div>
         </div>
-    </div>
-  </div>
+      </div>
+      <footer class="text-center small tm-footer">
+        <p class="mb-0">
+          Copyright &copy; 2026 Inka Consulting. All Rights Reserved.
+        </p>
+      </footer>
+    </section>
 
-  <footer class="text-center small tm-footer">
-    <p class="mb-0">
-      Copyright &copy; 2026 Inka Consulting. All Rights Reserved.
-    </p>
-  </footer>
-</section>
     <script src="js/jquery-1.9.1.min.js"></script>     
     <script src="js/bootstrap.min.js"></script> 
     <script src="js/jquery.singlePageNav.min.js"></script> 
     <script>
       $(function(){
-        $('#tmNav').singlePageNav();
+        // Initialize Single Page Nav but tell it to ignore the external links in our dropdown
+        $('#tmNav').singlePageNav({
+            filter: ':not(.external)',
+            updateHash: true
+        });
       });
     </script>
 </body>
