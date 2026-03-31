@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Performance & Effectiveness | Inka Consulting</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/tooplate-infinite-loop.css">
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <style>
+        /* Modern Z-Pattern Styling */
+        .service-hero-section {
+            background: linear-gradient(rgba(2, 12, 69, 0.85), rgba(2, 12, 69, 0.85)), url('img/performance-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        .service-row { padding: 100px 0; align-items: center; border-bottom: 1px solid #f0f0f0; }
+        .service-row:last-child { border-bottom: none; }
+        
+        /* This makes the second row flip on desktop */
+        @media (min-width: 768px) {
+            .row-reverse-desktop { flex-direction: row-reverse; }
+        }
+
+        .service-image-container img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            transition: transform 0.4s ease;
+        }
+        .service-image-container img:hover { transform: scale(1.02); }
+        
+        .service-text-content h3 {
+            color: #020c45;
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+        .service-text-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        .intro-quote {
+            max-width: 800px;
+            margin: -40px auto 60px;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left: 5px solid #369;
+            font-style: italic;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md tm-navbar scroll">
@@ -16,39 +67,71 @@
 
     <header class="service-hero-section">
         <div class="container">
-            <h1 class="display-4 font-weight-bold">Performance & Organizational Effectiveness</h1>
+            <h1 class="display-3 font-weight-bold">Performance & Organizational Effectiveness</h1>
         </div>
     </header>
 
-    <main class="container tm-section-pad-top">
-        <div class="service-intro-box text-center">
+    <main class="container">
+        <div class="intro-quote text-center">
             "Building systems that bring out the best in your people."
         </div>
 
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="pillar-card">
-                    <h3 class="pillar-title">Performance Management</h3>
-                    <p>We help you design and implement performance frameworks that are fair, motivating, and aligned to your business objectives — moving beyond annual reviews to meaningful, continuous dialogue.</p>
-                </div>
+        <div class="row service-row">
+            <div class="col-md-6 service-text-content">
+                <h3>Performance Management</h3>
+                <p>
+                    Effective performance management is about more than just checking boxes; it's about fostering growth and alignment. We help you design and implement performance frameworks that are fair, motivating, and directly tied to your business objectives. 
+                </p>
+                <p>
+                    By moving beyond outdated annual reviews, we help your organization transition to a culture of meaningful, continuous dialogue that drives real results and employee satisfaction.
+                </p>
             </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="pillar-card">
-                    <h3 class="pillar-title">Compensation & Benefits</h3>
-                    <p>We develop competitive, equitable compensation structures that attract talent, reward performance, and reflect your values.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="pillar-card">
-                    <h3 class="pillar-title">HR Analytics Consulting</h3>
-                    <p>We turn your people data into powerful insights, helping you make informed, evidence-based decisions about your workforce.</p>
-                </div>
+            <div class="col-md-6 service-image-container">
+                <img src="img/performance-1.jpg" alt="Performance Management Strategy">
             </div>
         </div>
 
-        <div class="text-center mt-5 mb-5">
+        <div class="row service-row row-reverse-desktop">
+            <div class="col-md-6 service-text-content">
+                <h3>Compensation & Benefits Services</h3>
+                <p>
+                    Attracting and retaining talent requires a strategy that reflects both market reality and your company values. We develop competitive, equitable compensation structures designed to reward high performance and ensure internal fairness.
+                </p>
+                <p>
+                    From salary benchmarking to total rewards packages, we ensure your investment in your people is optimized to keep your team engaged and loyal for the long term.
+                </p>
+            </div>
+            <div class="col-md-6 service-image-container">
+                <img src="img/performance-2.jpg" alt="Compensation and Benefits Consulting">
+            </div>
+        </div>
+
+        <div class="row service-row">
+            <div class="col-md-6 service-text-content">
+                <h3>HR Analytics Consulting</h3>
+                <p>
+                    Data-driven organizations are 3x more likely to report significant improvements in decision-making. We turn your raw people data into powerful, actionable insights. 
+                </p>
+                <p>
+                    Whether it's turnover trends, engagement levels, or workforce planning, we help you make informed, evidence-based decisions that prove the ROI of your people strategy.
+                </p>
+            </div>
+            <div class="col-md-6 service-image-container">
+                <img src="img/performance-3.jpg" alt="HR Data Analytics">
+            </div>
+        </div>
+
+        <div class="text-center mt-5 mb-5 pb-5">
+            <h4 class="mb-4">Ready to optimize your workforce?</h4>
             <a href="index.html#contact" class="tm-btn-primary">Connect with Dhwani</a>
         </div>
     </main>
+
+    <footer class="text-center py-5 bg-light">
+        <p class="small text-muted">Copyright &copy; 2026 Inka Consulting. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
