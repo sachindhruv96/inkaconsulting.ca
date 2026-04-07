@@ -442,128 +442,29 @@ p {
     line-height: 1.9;
 }
 
-@media (min-width: 768px) {
-  .tm-intro-text-container {
-    padding-left: 0px;
-  }
-  .navbar-expand-md .navbar-nav .nav-link {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1275px;
-  }
-  .tm-container-gallery {
-    max-width: 1290px;
-  }
-  .tm-container-contact {
-    max-width: 1063px;
-  }
-}
-@media (max-width: 991px) {
-  .tm-intro-text-container {
-    padding-left: 15px;
-    padding-top: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tm-intro-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tm-btn-submit {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-}
-
 /* ==========================================
-   INKA CONSULTING BRAND & MOBILE OVERRIDES
+   INKA BRANDING & LAYOUT OVERRIDES
    ========================================== */
 
-/* Sub-page Specific Styling */
-.inka-values-bg { 
-    background-color: #020c45; 
-    color: #ffffff; 
-    padding: 100px 0; 
-}
-.practice-card { 
-    border: 1px solid #eee; 
-    padding: 30px; 
-    height: 100%; 
-    transition: 0.3s; 
-    background: #fff; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
-}
-.practice-card:hover { 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-    border-color: #369; 
-}
-.founder-image { 
-    border: 10px solid rgba(255,255,255,0.1); 
-    border-radius: 50%; 
-    max-width: 300px; 
-    width: 100%; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
-}
-.btn-read-more { 
-    margin-top: 15px; 
-    align-self: flex-start; 
-    font-size: 0.85rem; 
-    padding: 8px 20px; 
-    border-radius: 4px; 
-}
-
-.service-hero {
-    background-color: #020c45;
-    padding: 150px 0 80px;
-    color: white;
-}
-.service-card {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 40px;
-    border-radius: 8px;
-    height: 100%;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: #369;
-}
-.back-btn {
-    display: inline-block;
-    margin-bottom: 20px;
-    color: #369;
-    font-weight: bold;
-}
-
-/* Global Typography - RESET (No forced lowercase) */
-h1, h2, h3, h4, h5 {
+/* 1. Global Typography Reset */
+h1, h2, h3, h4, h5, .tm-section-title {
     color: #020C45; 
     text-transform: none !important; /* Fix for Dhwani Bhatia & Services */
 }
 
-/* Brand Exception (Forced lowercase) */
+/* 2. Specific Brand Identity */
 .navbar-brand, 
 .tm-hero-title {
-    text-transform: lowercase !important; 
+    text-transform: lowercase !important; /* Protects 'inka' branding */
 }
 
-/* Primary Button Styling */
+/* 3. Primary Branding Color (Red Accents) */
 .tm-btn-primary {
     background-color: #E13333; 
     border-color: #E13333;
     color: #ffffff;
     padding: 14px 30px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     text-transform: none;
 }
 .tm-btn-primary:hover, .tm-btn-primary:focus {
@@ -572,13 +473,33 @@ h1, h2, h3, h4, h5 {
     color: #ffffff;
 }
 
-/* Desktop Dropdown Enhancements */
-.nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-.dropdown-menu { background-color: #ffffff; border: none; border-radius: 0; box-shadow: 0 8px 15px rgba(0,0,0,0.1); padding: 10px 0; }
-.dropdown-item { color: #020c45 !important; font-size: 0.9rem; padding: 10px 20px; transition: 0.3s; }
-.dropdown-item:hover { background-color: #f8f9fa; color: #e13333 !important; padding-left: 25px; }
+/* 4. Service Page Sub-styling */
+.service-hero {
+    background-color: #020c45; /* Dark blue background */
+    padding: 150px 0 80px;
+    color: white;
+}
 
-/* Fix White Text on Dark Backgrounds */
+.inka-values-bg { 
+    background-color: #020c45; 
+    color: #ffffff; 
+    padding: 100px 0; 
+}
+
+/* 5. Mobile Heading Fit Fix (Fluid Typography) */
+.service-hero h1, 
+.display-3 {
+    /* Scalable font sizing based on screen width */
+    font-size: clamp(1.8rem, 8vw, 3.5rem) !important;
+    text-transform: none !important; 
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto;
+    line-height: 1.2 !important;
+    width: 100%;
+}
+
+/* 6. Dark Background Readability Overrides */
 #infinite .tm-hero-title, 
 #infinite .tm-hero-subtitle, 
 #infinite h1, #infinite p,
@@ -589,20 +510,26 @@ h1, h2, h3, h4, h5 {
     -webkit-text-fill-color: #ffffff !important;
 }
 
-/* Navigation Toggler Fixes */
-.navbar-toggler {
-    border-color: rgba(2, 12, 69, 0.1); 
-    z-index: 9999 !important; 
-    position: relative;
-}
-.navbar-toggler i, .navbar-toggler-icon {
-    color: #ffffff !important;
-}
-.scroll .navbar-toggler i { 
-    color: #020c45 !important; 
+/* ==========================================
+   RESPONSIVE DESIGN & NAVIGATION
+   ========================================== */
+
+@media (min-width: 768px) {
+  .tm-intro-text-container {
+    padding-left: 0px;
+  }
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
-/* Mobile Menu Container */
+@media (min-width: 1200px) {
+  .container { max-width: 1275px; }
+  .tm-container-gallery { max-width: 1290px; }
+  .tm-container-contact { max-width: 1063px; }
+}
+
 @media (max-width: 991px) {
     .navbar-collapse {
         background-color: #ffffff !important;
@@ -616,58 +543,17 @@ h1, h2, h3, h4, h5 {
         width: 100%;
         z-index: 9998; 
     }
-
-    .nav-link {
-        color: #020c45 !important;
-        padding: 10px 0;
-    }
-
-    .dropdown-menu {
-        background-color: #f8f9fa !important; 
-        border-left: 3px solid #e13333 !important;
-        display: none !important; 
-        position: static !important;
-        width: 100% !important;
-        margin: 10px 0 10px 10px !important;
-        box-shadow: none !important;
-    }
-
-    .nav-item.dropdown.show .dropdown-menu { display: block !important; }
-
-    .dropdown-item {
-        color: #020c45 !important;
-        padding: 12px 25px !important;
-        font-weight: 500 !important;
-        white-space: normal !important;
-    }
-}
-
-/* ==========================================
-   ADVANCED FLUID HEADINGS (MOBILE FIT FIX)
-   ========================================== */
-
-.service-hero h1, 
-.display-3 {
-    /* Scalable font for long words like 'Acquisition' */
-    font-size: clamp(1.8rem, 8vw, 3.5rem) !important;
-    text-transform: none !important; 
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    hyphens: auto;
-    line-height: 1.1 !important;
-    width: 100%;
+    .nav-link { color: #020c45 !important; padding: 10px 0; }
 }
 
 @media (max-width: 767px) {
     .service-hero {
         padding: 80px 15px 40px 15px !important;
     }
-
     .service-hero p.lead {
         font-size: 1rem !important;
         margin-top: 10px;
     }
-    
     .tm-section-title {
         font-size: 2rem !important;
     }
