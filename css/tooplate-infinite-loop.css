@@ -792,4 +792,54 @@ h1, h2, h3, h4, .navbar-brand {
         padding: 10px 0;
     }
 }
+	/* --- Final Mobile Visibility Fixes --- */
+
+/* 1. Force the Hero Title to stay White (stops it from turning blue) */
+.tm-hero-title, 
+.tm-hero-subtitle,
+#infinite h1, 
+#infinite p {
+    color: #ffffff !important; /* Force white on dark hero background */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds readability */
+}
+
+/* 2. Fix the Mobile Hamburger Menu Dropdown */
+/* This ensures that when the "Services" menu is opened on a phone, the text is Navy */
+@media (max-width: 991px) {
+    /* The container that holds the links when hamburger is clicked */
+    .navbar-collapse {
+        background-color: #ffffff !important; 
+        padding: 15px;
+    }
+
+    /* Force the dropdown (Services) links to be visible Navy Blue */
+    .dropdown-menu {
+        background-color: #f8f9fa !important; /* Light grey background to distinguish it */
+        border: none !important;
+        display: block !important; /* Ensures it stays visible when parent is clicked */
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        margin: 10px 0 !important;
+    }
+
+    .dropdown-item {
+        color: #020c45 !important; /* Foundational Navy */
+        padding: 12px 25px !important;
+        background: transparent !important;
+        font-weight: 500 !important;
+        text-align: left !important;
+    }
+
+    /* Red accent when a service is tapped */
+    .dropdown-item:active, .dropdown-item:focus {
+        color: #e13333 !important; 
+        background-color: #eeeeee !important;
+    }
+}
+
+/* 3. Branding: Ensure 'inka' stays lowercase even on mobile */
+.navbar-brand, .tm-hero-title {
+    text-transform: lowercase !important; /* Matches brand identity */
+}
 }
