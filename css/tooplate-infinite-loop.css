@@ -842,4 +842,64 @@ h1, h2, h3, h4, .navbar-brand {
 .navbar-brand, .tm-hero-title {
     text-transform: lowercase !important; /* Matches brand identity */
 }
+	/* ==========================================
+   FINAL MOBILE OVERRIDES 
+   ========================================== */
+
+/* 1. FIX BLUE TEXT ON SERVICE LANDING PAGES */
+/* Targets the big titles on your 4 sub-pages */
+.service-hero-section h1, 
+.service-hero-section .display-3,
+.service-text-content h3 {
+    color: #ffffff !important; /* Forces white on the dark hero background */
+    -webkit-text-fill-color: #ffffff !important; /* Specifically for iPhones */
+    text-decoration: none !important;
+}
+
+/* 2. FIX INVISIBLE SERVICES MENU IN HAMBURGER */
+@media (max-width: 991px) {
+    /* Ensure the mobile menu container has a solid white background */
+    .navbar-collapse {
+        background-color: #ffffff !important;
+        display: block !important;
+    }
+
+    /* Force the 'Services' dropdown items to be Navy Blue and Visible */
+    /* This targets the specific sub-menu links you couldn't see */
+    .dropdown-menu {
+        background-color: #f1f1f1 !important; /* Light grey so it looks separate */
+        display: block !important; /* Keeps it expanded on mobile for easier use */
+        position: static !important;
+        float: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .dropdown-item {
+        color: #020c45 !important; /* Foundational Navy */
+        padding: 12px 30px !important;
+        white-space: normal !important; /* Prevents text from cutting off */
+        font-weight: 500 !important;
+    }
+
+    /* Red accent when you tap a service link */
+    .dropdown-item:active, 
+    .dropdown-item:hover {
+        color: #e13333 !important; /* Impact Red */
+        background-color: #e9ecef !important;
+    }
+}
+
+/* 3. FIX BLUE TEXT ON MAIN LANDING PAGE HERO */
+#infinite .tm-hero-title, 
+#infinite .tm-hero-subtitle {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* 4. MAINTAIN BRAND TYPOGRAPHY */
+/* Ensures 'inka' stays lowercase even if the phone tries to capitalize it */
+.navbar-brand, h1, h2 {
+    text-transform: lowercase !important; /* Matches your branding */
+}
 }
