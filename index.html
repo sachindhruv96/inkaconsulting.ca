@@ -249,17 +249,30 @@
       </footer>
     </section>
 
-    <script src="js/jquery-1.9.1.min.js"></script>     
-    <script src="js/bootstrap.min.js"></script> 
-    <script src="js/jquery.singlePageNav.min.js"></script> 
-    <script>
-      $(function(){
-        // Initialize Single Page Nav but tell it to ignore the external links in our dropdown
-        $('#tmNav').singlePageNav({
-            filter: ':not(.external)',
-            updateHash: true
-        });
-      });
-    </script>
+<script src="js/jquery-1.9.1.min.js"></script>     
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.singlePageNav.min.js"></script> 
+<script>
+  $(function(){
+    // 1. Initialize Single Page Nav
+    $('#tmNav').singlePageNav({
+        filter: ':not(.external)',
+        updateHash: true
+    });
+
+    // 2. Fix: Collapse mobile menu after clicking a link
+    $('.navbar-nav .nav-link').on('click', function(e) {
+        // If it's not the 'Services' toggle, close the menu
+        if (!$(this).hasClass('dropdown-toggle')) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+
+    // 3. Fix: Collapse mobile menu after clicking a service in the dropdown
+    $('.dropdown-item').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+  });
+</script>
 </body>
 </html>
