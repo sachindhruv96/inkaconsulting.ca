@@ -699,4 +699,36 @@ h1, h2, h3, h4, .navbar-brand {
 .navbar-nav .nav-link.active::after {
     background-color: #E13333; /* Subtly calls out active section */
 }
+	/* --- Mobile Responsiveness Fixes --- */
+
+@media (max-width: 767px) {
+    /* Ensure hero text doesn't overflow the screen */
+    .display-3 {
+        font-size: 2.5rem !important;
+    }
+
+    /* Fix the alternating rows so they stack consistently */
+    .service-row {
+        padding: 40px 0 !important;
+        text-align: center; /* Centers text for better mobile readability */
+    }
+
+    /* Force images to stay below/above text instead of side-by-side */
+    .service-image-container {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    /* Ensure the intro quote isn't too wide */
+    .intro-quote {
+        font-size: 1.1rem !important;
+        padding: 20px !important;
+        margin: -20px 15px 30px 15px !important;
+    }
+
+    /* Remove horizontal scrolling issues */
+    .container {
+        overflow-x: hidden;
+    }
+}
 }
