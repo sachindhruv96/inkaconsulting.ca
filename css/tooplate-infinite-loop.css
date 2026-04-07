@@ -734,4 +734,50 @@ h1, h2, h3, h4, .navbar-brand, .tm-hero-title {
 .navbar-brand, .tm-hero-title {
     text-transform: lowercase !important;
 }
+    /* ==========================================
+   ADVANCED FLUID HEADINGS FOR SERVICE PAGES
+   ========================================== */
+
+/* 1. Target the main titles on your 5 sub-pages */
+.service-hero h1, 
+.service-hero-section h1, 
+.display-3 {
+    /* FLUID SIZE: Automatically scales between 1.8rem and 4rem based on screen width */
+    font-size: clamp(1.8rem, 8vw, 4rem) !important;
+    
+    /* CASE FIX: Respects your typing (e.g. "Talent Acquisition") instead of lowercase */
+    text-transform: none !important; 
+    
+    /* THE "FIT" FIX: Prevents long words from jumping out of the container */
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto;
+    
+    /* SPACING: Ensures the lines don't overlap when they wrap on a phone */
+    line-height: 1.1 !important;
+    letter-spacing: -0.5px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. MOBILE-SPECIFIC CONTAINER TWEAKS */
+@media (max-width: 767px) {
+    .service-hero {
+        /* Reduces the vertical "dead space" on mobile phones */
+        padding: 70px 15px 40px 15px !important;
+    }
+
+    .service-hero p.lead {
+        /* Scales the subtitle text to stay proportional */
+        font-size: 1.1rem !important;
+        margin-top: 10px;
+        line-height: 1.4;
+    }
+}
+
+/* 3. BRAND PROTECTION: Keep 'inka' lowercase on the main Navbar & Home Hero */
+.navbar-brand, .tm-hero-title {
+    text-transform: lowercase !important;
+}
 }
