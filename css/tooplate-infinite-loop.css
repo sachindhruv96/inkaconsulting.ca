@@ -731,4 +731,65 @@ h1, h2, h3, h4, .navbar-brand {
         overflow-x: hidden;
     }
 }
+	/* --- Critical Fixes for Mobile Visibility --- */
+
+/* 1. Prevent "inka consulting" from turning blue on phone */
+.navbar-brand, 
+.navbar-brand:hover, 
+.navbar-brand:visited, 
+.navbar-brand:active {
+    color: #ffffff !important; /* Force white on hero background */
+    text-decoration: none !important;
+}
+
+/* 2. Make the Logo & Links Navy Blue when scrolling or on mobile menu */
+.tm-navbar.scroll .navbar-brand,
+.tm-navbar.scroll .nav-link {
+    color: #020c45 !important; /* Foundational Navy */
+}
+
+/* 3. Fix Hamburger Menu Visibility */
+/* This ensures the icon is always Navy Blue so it's visible on white sections */
+.navbar-toggler {
+    border-color: rgba(2, 12, 69, 0.1); 
+}
+
+.navbar-toggler i, 
+.navbar-toggler-icon {
+    color: #020c45 !important; /* Foundational Navy */
+}
+
+/* 4. Fix Services Dropdown Menu Visibility */
+/* Dropdowns usually have a white background, so the text MUST be dark */
+.dropdown-menu {
+    background-color: #ffffff !important;
+    border: 1px solid #f0f0f0;
+}
+
+.dropdown-item {
+    color: #020c45 !important; /* Foundational Navy */
+    padding: 12px 20px;
+    font-weight: 400;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #e13333 !important; /* Impact Red accent on hover */
+}
+
+/* 5. Specific Mobile Navigation Styling (Phones only) */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #ffffff; /* White background for the mobile drawer */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        color: #020c45 !important; /* Ensure all menu links are Navy on mobile */
+        padding: 10px 0;
+    }
+}
 }
